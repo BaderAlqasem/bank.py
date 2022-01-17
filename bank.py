@@ -27,12 +27,15 @@ class Bank(User):
             print("Insufficient Funds | Balance Available : $", self.balance)
         else:
             self.balance = self.balance - self.amount
-            print("Account balance has been updated : $", self.balance)
+            print("Account balance : $", self.balance)
             
     def viewBalance(self):
         self.showDetails()
         print("Account balance: $", self.balance)
         
-# Bader = Bank("Bader", 20, "Male")
-# Bader.deposit(1000)
-# Bader.showDetails()
+user = Bank("Bader", 20, "Male")
+user.deposit(1000)
+# user.viewBalance()
+# user.showDetails()
+user.withdraw(500)
+user.viewBalance()
