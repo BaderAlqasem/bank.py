@@ -1,8 +1,9 @@
-class User():
+class Bank():
     def __init__(self, name, age, gender):
         self.name = name
         self.age = age
         self.gender = gender
+        self.balance = 0
         
     def showDetails(self):
         print("Personal Details")
@@ -10,11 +11,6 @@ class User():
         print("Name ", self.name)
         print("Age ", self.age)
         print("Gender ", self.gender)
-        
-class Bank(User):
-    def __init__(self, name, age, gender):
-        super().__init__(name, age, gender)
-        self.balance = 0
     
     def deposit(self, amount):
         self.amount = amount
@@ -33,9 +29,12 @@ class Bank(User):
         self.showDetails()
         print("Account balance: $", self.balance)
         
-user = Bank("Bader", 20, "Male")
-user.deposit(1000)
-# user.viewBalance()
-# user.showDetails()
-user.withdraw(500)
-user.viewBalance()
+Bader = Bank("Bader", 20, "Male")
+Bader.deposit(1000)
+Bader.viewBalance()
+Bader.withdraw(800)
+
+Yerns = Bank("Yerns", 99, "Gay")
+Yerns.deposit(500)
+Yerns.viewBalance()
+Yerns.withdraw(499)
