@@ -5,7 +5,7 @@ class Bank():
         self.gender = gender
         self.balance = 0
         
-    def showDetails(self):
+    def userInfo(self):
         print("Personal Details")
         print("")
         print("Name ", self.name)
@@ -25,16 +25,16 @@ class Bank():
             self.balance = self.balance - self.amount
             print("Account balance : $", self.balance)
             
-    def viewBalance(self):
-        self.showDetails()
+    def userBalance(self):
+        self.userInfo()
         print("Account balance: $", self.balance)
         
 Bader = Bank("Bader", 20, "Male")
 Bader.deposit(1000)
-Bader.viewBalance()
+Bader.userBalance()
 Bader.withdraw(800)
 
 Jane = Bank("Jane", 29, "Female")
 Jane.deposit(500)
-Jane.viewBalance()
+Jane.userBalance()
 Jane.withdraw(499)
